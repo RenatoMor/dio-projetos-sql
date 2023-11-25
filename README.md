@@ -17,7 +17,8 @@
 </div>
 
 
-<h3>Encontre-me</h3> :handshake:
+<h3>Encontre-me :handshake: </h3> 
+
 
 <p align="center">
     <a href="https://www.linkedin.com/in/renatomoreira-rm/" target="_blank">
@@ -63,12 +64,12 @@
 - [Licença :traffic_light:](#licença-traffic_light)
 - [Agradecimentos :tada:](#agradecimentos-tada)
 
-<div style="height: 2px; background-color: #0077B5;"></div>
+---
 
 ###  Descrição do Projeto :scroll:
 O projeto é um sistema de e-commerce que envolve clientes, fornecedores, vendedores terceiros, produtos, formas de pagamento, pedidos, entregas e gestão de estoque. Os clientes podem fazer pedidos de produtos que podem ser fornecidos por diferentes fontes, incluindo fornecedores e vendedores terceiros. As formas de pagamento oferecem opções variadas, e o sistema acompanha todo o processo, desde a compra até a entrega, garantindo uma gestão eficiente do estoque.
 
-<div style="height: 1px; background-color: #0077B5;"></div>
+---
 
 ### **Cliente** :writing_hand:
 
@@ -88,7 +89,7 @@ O projeto é um sistema de e-commerce que envolve clientes, fornecedores, vended
     - Cliente pode ter zero ou mais formas de pagamento.
     - Cardinalidade: 0..n.
 
-<div style="height: 1px; background-color: #0077B5;"></div>
+---
 
 ### Fornecedor :hammer_and_wrench:
 
@@ -103,7 +104,7 @@ O projeto é um sistema de e-commerce que envolve clientes, fornecedores, vended
     - Fornecedor pode fornecer zero ou mais produtos.             
     - Cardinalidade: 0..n.
 
-<div style="height: 1px; background-color: #0077B5;"></div>
+---
 
 ### Vendedor Terceiro :sparkles:
 
@@ -119,7 +120,7 @@ O projeto é um sistema de e-commerce que envolve clientes, fornecedores, vended
     - Cardinalidade: 0..n.
 
 
-<div style="height: 1px; background-color: #0077B5;"></div>
+---
 
 ### Produto :footprints:
 
@@ -143,7 +144,7 @@ O projeto é um sistema de e-commerce que envolve clientes, fornecedores, vended
     - Produto pode ser vendido por zero ou mais vendedores terceiros. 
     - Cardinalidade: 0..n.
 
-<div style="height: 1px; background-color: #0077B5;"></div>
+---
 
 ### Forma de Pagamento :footprints:
 
@@ -160,7 +161,7 @@ O projeto é um sistema de e-commerce que envolve clientes, fornecedores, vended
     - Forma de pagamento pode ser associada a zero ou mais clientes. 
     - Cardinalidade: 0..n.
 
-<div style="height: 1px; background-color: #0077B5;"></div>
+---
 
 ### Forma de Pagamento por Cliente :footprints:
 
@@ -179,7 +180,7 @@ O projeto é um sistema de e-commerce que envolve clientes, fornecedores, vended
     - Cliente pode ter zero ou mais formas de pagamento. 
     - Cardinalidade: 0..n.
 
-<div style="height: 1px; background-color: #0077B5;"></div>
+---
 
 ### Pedido :footprints:
 
@@ -203,7 +204,7 @@ O projeto é um sistema de e-commerce que envolve clientes, fornecedores, vended
     - Pedido pode ter zero ou mais entregas. 
     - Cardinalidade: 0..n.
 
-<div style="height: 1px; background-color: #0077B5;"></div>
+---
 
 ### Pedido por Produto :footprints:
 
@@ -222,7 +223,7 @@ O projeto é um sistema de e-commerce que envolve clientes, fornecedores, vended
     - Pedido pode ter zero ou mais produtos. 
     - Cardinalidade: 0..n.
 
-<div style="height: 1px; background-color: #0077B5;"></div>
+---
 
 ### Entrega :footprints:
 
@@ -238,7 +239,7 @@ O projeto é um sistema de e-commerce que envolve clientes, fornecedores, vended
     - Entrega está associada a um único pedido. 
     - Cardinalidade: 1.
 
-<div style="height: 1px; background-color: #0077B5;"></div>
+---
 
 ### Estoque :footprints:
 
@@ -253,7 +254,7 @@ O projeto é um sistema de e-commerce que envolve clientes, fornecedores, vended
     - Estoque pode ter zero ou mais produtos. 
     - Cardinalidade: 0..n.
 
-<div style="height: 1px; background-color: #0077B5;"></div>
+---
 
 ### Estoque por Produto :footprints:
 
@@ -274,7 +275,7 @@ O projeto é um sistema de e-commerce que envolve clientes, fornecedores, vended
     - Estoque pode ter zero ou mais produtos. 
     - Cardinalidade: 0..n.
 
-<div style="height: 1px; background-color: #0077B5;"></div>
+---
 
 ### Disponibilizando Produtos :footprints:
 
@@ -290,17 +291,16 @@ IDFornecedor|Descrição|
     - Fornecedor pode disponibilizar zero ou mais produtos. 
     - Cardinalidade: 0..n.
 
-<div style="height: 1px; background-color: #0077B5;"></div><p>
-
+---
 Copyright © 2023 / RenatoMor
 
-<div style="height: 1px; background-color: #0077B5;"></div>
+---
 
 ### Licença :traffic_light:
 Este projeto está licenciado sob a Licença consulte o arquivo 
  [MIT](https://opensource.org/licenses/MIT).
 
-<div style="height: 1px; background-color: #0077B5;"></div>
+---
 
 ### Agradecimentos :tada:
 Digital Innovation One: Pela oportunidade de aprendizado e formação em Java.
