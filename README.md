@@ -1,12 +1,12 @@
 <div style="border: 0px solid #00f; padding: 10px; display: flex; justify-content: center;">
     <div style="box-shadow: 3px 3px 5px #888; display: flex; align-items: center; text-align: center; font-family: 'Verdana', sans-serif;">        
-        <h1 style="margin: 0; text-shadow: 2px 2px 3px #888;">Formação Java Developer</h1>
+        <h1 style="margin: 0; text-shadow: 2px 2px 3px #888;">Formação SQL Database Specialist</h1>
     </div>
 </div>
 
 <br>
 <div style="border: 0px solid #00f; padding: 10px; display: flex; align-items: center; justify-content: center; text-align: center; font-family: 'Lato', sans-serif;">
-    <h2 style="margin: 0; text-shadow: 2px 2px 3px #888; font-family: 'Helvetica', sans-serif; text-decoration: none;">Desafio: Projeto Conceitual de Banco de Dados • E-COMMERCE</h2>
+    <h2 style="margin: 0; text-shadow: 2px 2px 3px #888; font-family: 'Helvetica', sans-serif; text-decoration: none;">Desafio: Projeto Conceitual de Banco de Dados</h2>
 </div>
 
 
@@ -48,248 +48,77 @@
 
 <h3>Menu</h3>
 
-- [Descrição do Projeto :scroll:](#descrição-do-projeto-scroll)
-- [Cliente :writing_hand:](#cliente-writing_hand)
-- [Fornecedor :hammer_and_wrench:](#fornecedor-hammer_and_wrench)
-- [Vendedor Terceiro :sparkles:](#vendedor-terceiro-sparkles)
-- [Produto :footprints:](#produto-footprints)
-- [Forma de Pagamento :footprints:](#forma-de-pagamento-footprints)
-- [Forma de Pagamento por Cliente :footprints:](#forma-de-pagamento-por-cliente-footprints)
-- [Pedido :footprints:](#pedido-footprints)
-- [Pedido por Produto :footprints:](#pedido-por-produto-footprints)
-- [Entrega :footprints:](#entrega-footprints)
-- [Estoque :footprints:](#estoque-footprints)
-- [Estoque por Produto :footprints:](#estoque-por-produto-footprints)
-- [Disponibilizando Produtos :footprints:](#disponibilizando-produtos-footprints)
+- [Modelo Conceitual BD :scroll:](#modelo-conceitual-bd-scroll)
+- [Projeto E-commerce :writing_hand:](#projeto-e-commerce-writing_hand) 
+- [Projeto Oficina Mecânica :writing_hand:](#projeto-oficina-mecânica-writing_hand)
 - [Licença :traffic_light:](#licença-traffic_light)
 - [Agradecimentos :tada:](#agradecimentos-tada)
 
 ---
 
-###  Descrição do Projeto :scroll:
-O projeto é um sistema de e-commerce que envolve clientes, fornecedores, vendedores terceiros, produtos, formas de pagamento, pedidos, entregas e gestão de estoque. Os clientes podem fazer pedidos de produtos que podem ser fornecidos por diferentes fontes, incluindo fornecedores e vendedores terceiros. As formas de pagamento oferecem opções variadas, e o sistema acompanha todo o processo, desde a compra até a entrega, garantindo uma gestão eficiente do estoque.
+###  Modelo Conceitual BD :scroll:
+
+O modelo conceitual de banco de dados é uma representação abstrata e visual das relações entre as entidades fundamentais em um sistema de banco de dados. Ele descreve a estrutura e as interações de dados de maneira independente de detalhes específicos de implementação, fornecendo uma visão clara e compreensível da organização dos dados.
+
+No âmbito do modelo conceitual, entidades referem-se aos objetos principais ou conceitos significativos no domínio do sistema, enquanto os relacionamentos destacam as associações entre essas entidades. Uma ferramenta comum para expressar essas relações é o Diagrama Entidade-Relacionamento (DER).
+
+O modelo conceitual busca simplificar a complexidade do mundo real em termos compreensíveis para os usuários e desenvolvedores. Ele permite uma visão holística das principais entidades envolvidas, suas características e como elas se conectam. Essa abstração facilita a comunicação entre stakeholders, fornecendo uma linguagem comum para discutir requisitos e entender a estrutura do banco de dados.
+
+Ao criar um modelo conceitual, é crucial identificar e definir corretamente as entidades e seus atributos, além de esclarecer os tipos de relacionamentos entre elas. Essa etapa é fundamental para estabelecer a base sólida necessária para a criação de modelos mais detalhados no futuro, como o modelo lógico e o modelo físico.
+
+Em resumo, o modelo conceitual é uma ferramenta essencial na fase inicial do design de banco de dados, capacitando os envolvidos a visualizar e compreender a estrutura de dados de forma intuitiva, antes de entrar em considerações mais específicas de implementação.
 
 ---
 
-### **Cliente** :writing_hand:
+## Projeto E-commerce :writing_hand:
 
-**Atributos** 
+#### Narrativa do projeto:
 
-|IDCliente|Nome|CPF|
-|---------|----|---|
-|CNPJ|Endereço|Tipo de Cliente|
+1. Os produtos são vendidos por uma única plataforma online. Contudo, estes podem ter vendedores distintos terceiros.
 
-**Relacionamentos:**
+2. Cada produto possui um fornecedor.
 
-- fk_Pedido_Cliente1:
-    - Cliente pode fazer zero ou mais pedidos.
-    - Cardinalidade: 0..n.
-    
-- fk_FormaPagamento_has_Cliente_Cliente1:
-    - Cliente pode ter zero ou mais formas de pagamento.
-    - Cardinalidade: 0..n.
+3. Um ou mais produtos podem compor um pedido.
 
----
+4. O pedidos são criados por clientes e possuem informações de compra, endereço e status da entrega.
 
-### Fornecedor :hammer_and_wrench:
+5. Um produto ou mais compõem o pedido.
 
-**Atributos**  
+6. O pedido pode ser cancelado.
 
-|IDFornecedor|RazãoSocial|Endereço|
-|------------|-----------|--------|
 
-**Relacionamentos:**
 
-- fk_Produto_por_Fornecedor_Fornecedor1:
-    - Fornecedor pode fornecer zero ou mais produtos.             
-    - Cardinalidade: 0..n.
+## Projeto Oficina Mecânica :writing_hand:
 
----
+#### Narrativa do projeto:
 
-### Vendedor Terceiro :sparkles:
+**Sistema de controle e gerenciamento de execução de
+ordens de serviço em uma oficina mecânica**
+ 
+1. Clientes levam veículos à oficina mecânica para serem
+consertados ou para passarem por revisões periódicas
 
-**Atributos**  
+2. Cada veículo é designado a uma equipe de mecânicos que
+identifica os serviços a serem executados e preenche uma
+OS com data de entrega.
 
-|IDVendedorTerceiro|RazãoSocial|Local|
-|------------------|-----------|-----|
+3. A partir da OS, calcula se o valor de cada serviço ,
+consultando se uma tabela de referência de mão de obra
 
-**Relacionamentos:**
+4. O valor de cada peça também irá compor a OS.
 
-- fk_VendedorTerceiro_has_Produto_VendedorTerceiro1:
-    - Vendedor terceiro pode vender zero ou mais produtos.
-    - Cardinalidade: 0..n.
+5. O cliente autoriza a execução dos serviços.
 
+6. A mesma equipe avalia e executa os serviços.
 
----
+7. Os mecânicos possuem código , nome , endereço e especialidade.
 
-### Produto :footprints:
+8. Cada 'OS' possui : n °°, data de emissão , um valor, status e uma data para conclusão dos trabalhos.
 
-**Atributos**  
+9. Uma 'OS' pode ser composta por vários serviços e um mesmo serviço pode estar contido em mais de uma OS.
 
-|IDProduto|Descrição|Categoria|Identificação|Valor|
-|---------|---------|---------|-------------|-----|
-
-
-**Relacionamentos:**
-
-- fk_Pedido_has_Produto_Produto1: 
-    - Produto pode estar em zero ou mais pedidos.
-    - Cardinalidade: 0..n.
-
-- fk_Produto_has_Fornecedor_Produto: 
-    - Produto pertence a um único fornecedor. 
-    - Cardinalidade: 1.
-
-- fk_VendedorTerceiro_has_Produto_Produto1: 
-    - Produto pode ser vendido por zero ou mais vendedores terceiros. 
-    - Cardinalidade: 0..n.
-
----
-
-### Forma de Pagamento :footprints:
-
-**Atributos** 
-
-|IDFormaPagamento|Descrição|NumeroCartao|
-|----------------|---------|------------|
-|DataVencimentoCartao|NomeTitularCartao|ContaBancaria|
-
-
-**Relacionamentos:**
-
-- fk_FormaPagamento_has_Cliente_FormaPagamento1: 
-    - Forma de pagamento pode ser associada a zero ou mais clientes. 
-    - Cardinalidade: 0..n.
-
----
-
-### Forma de Pagamento por Cliente :footprints:
-
-**Atributos**
-
-|IDFormaPagamentoPorCliente|IDFormaPagamento|IDCliente|
-|--------------------------|----------------|---------|
-
-**Relacionamentos:**
-
-- fk_FormaPagamento_has_Cliente_FormaPagamento1: 
-    - Forma de pagamento pode ser associada a zero ou mais clientes. 
-    - Cardinalidade: 0..n.
-
-- fk_FormaPagamento_has_Cliente_Cliente1: 
-    - Cliente pode ter zero ou mais formas de pagamento. 
-    - Cardinalidade: 0..n.
-
----
-
-### Pedido :footprints:
-
-**Atributos** 
-
-|IDPedido|IDCliente|DataPedido|Status|Frete|
-|--------|---------|----------|------|-----|
-
-
-**Relacionamentos:**
-
-- fk_Pedido_Cliente1: 
-    - Pedido é feito por um único cliente. 
-    - Cardinalidade: 1.
-
-- fk_Pedido_has_Produto_Pedido1: 
-    - Pedido pode ter zero ou mais produtos. 
-    - Cardinalidade: 0..n.
-
-- fk_Entrega_Pedido1: 
-    - Pedido pode ter zero ou mais entregas. 
-    - Cardinalidade: 0..n.
-
----
-
-### Pedido por Produto :footprints:
-
-**Atributos**  
-
-|IDPedidoProduto|IDPedido|IDProduto|Quantidade|
-|---------------|--------|---------|----------|
-
-**Relacionamentos:**
-
-- fk_Pedido_has_Produto_Produto1: 
-    - Produto pode estar em zero ou mais pedidos. 
-    - Cardinalidade: 0..n.
-
-- fk_Pedido_has_Produto_Pedido1: 
-    - Pedido pode ter zero ou mais produtos. 
-    - Cardinalidade: 0..n.
-
----
-
-### Entrega :footprints:
-
-**Atributos**  
-
-|IDEntrega|IDPedido|IDCliente|Data|Status|CodigoRastreio|Endereco|
-|---------|--------|---------|----|------|--------------|--------|
-
-
-**Relacionamentos:**
-
-- fk_Entrega_Pedido1: 
-    - Entrega está associada a um único pedido. 
-    - Cardinalidade: 1.
-
----
-
-### Estoque :footprints:
-
-**Atributos**  
-
-|IDEstoque|Local|
-|---------|-----|
-
-**Relacionamentos:**
-
-- fk_Estoque_has_Produto_Estoque1: 
-    - Estoque pode ter zero ou mais produtos. 
-    - Cardinalidade: 0..n.
-
----
-
-### Estoque por Produto :footprints:
-
-**Atributos** 
-
-|IDEstoquePorProduto|IDEstoque|
-|-------------------|---------|
-|IDProduto|Quantidade|
-
-
-**Relacionamentos:**
-
-- fk_Estoque_has_Produto_Produto1: 
-    - Produto pode estar em zero ou mais estoques. 
-    - Cardinalidade: 0..n.
-
-- fk_Estoque_has_Produto_Estoque1: 
-    - Estoque pode ter zero ou mais produtos. 
-    - Cardinalidade: 0..n.
-
----
-
-### Disponibilizando Produtos :footprints:
-
-**Atributos**
-
-|IDDisponibilizandoProdutos|IDProduto|
-|--------------------------|---------|
-IDFornecedor|Descrição|
-
-**Relacionamentos:**
-
-- fk_Produto_por_Fornecedor_Fornecedor1: 
-    - Fornecedor pode disponibilizar zero ou mais produtos. 
-    - Cardinalidade: 0..n.
+10. Uma 'OS' pode ter vários tipos de peça e uma peça pode
+estar presente em mais de uma OS
 
 ---
 Copyright © 2023 / RenatoMor
