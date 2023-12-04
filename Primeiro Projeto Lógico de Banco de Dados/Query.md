@@ -70,7 +70,7 @@
 
 
 
-## Query E-Commerce
+## Query E-Commerce :snowflake:
 
 Este repositório abriga o modelo de banco de dados e as consultas SQL relacionadas a um sistema de e-commerce. O projeto inclui a definição de entidades, atributos, relações, e consultas específicas que fornecem insights valiosos sobre a dinâmica do e-commerce. Cada consulta foi cuidadosamente elaborada para abordar diferentes aspectos do sistema, desde informações sobre clientes e pedidos até métricas de pagamento e avaliações de produtos.
 
@@ -105,7 +105,7 @@ Este conjunto de consultas oferece uma visão abrangente e estruturada do sistem
 
 
 
-## Query 1 :mag_right:
+## Query 1 :closed_book
 
 **Exibindo Categoria dos pedidos dos Clientes PJ.** 
 
@@ -115,7 +115,7 @@ SELECT nome AS Razão_Social, descricao_pedido AS Categoria
 FROM cliente_pj
 INNER JOIN pedido ON id_cliente = id_pedido;
 ```
-## Query 2 :mag_right:
+## Query 2  :green_book:
 
 **Exibindo Endereço, renomear cabeçalho e Concatenar nome e sobrenome dos clientes PF do estado de Minas Gerais.**
 
@@ -126,7 +126,7 @@ SELECT CONCAT(nome, ' ', sobrenome) AS Nome_Completo, endereco AS Endereço
 FROM cliente_pf
 WHERE endereco LIKE '%RJ%';
 ```
-## Query 3 :mag_right:
+## Query 3 :blue_book:
 
 **Exibindo Quantidade de Pagamento via Pix.** 
 
@@ -136,7 +136,7 @@ SELECT COUNT(*) AS Total_Pix
 FROM pagamento
 WHERE tipo_pagamento = 'Pix';
 ```
-## Query 4 :mag_right:
+## Query 4 :orange_book
 
 **Exibindo Quantidade e Valor Total de Pagamentos por Pix.**
 
@@ -149,7 +149,7 @@ SELECT
 FROM pagamento
 WHERE pagamento.tipo_pagamento = 'Pix';
 ```
-## Query 5 :mag_right:
+## Query 5 :notebook:
 
 **Exibindo Quantidade e Valor Total de pagamentos por Cartão.**
 
@@ -162,7 +162,7 @@ SELECT
 FROM pagamento
 WHERE pagamento.tipo_pagamento = 'Cartão';
 ```
-## Query 6 :mag_right:
+## Query 6 :books:
 
 **Consulta 6: Exibindo Quantidade e Valor Total de pagamentos por Boleto.**
 
@@ -175,7 +175,7 @@ SELECT
 FROM pagamento
 WHERE pagamento.tipo_pagamento = 'Boleto';
 ```
-## Query 7 :mag_right:
+## Query 7 :interrobang:
 
 **Exibindo Média do limite para pagamento com cartão.**
 
@@ -186,7 +186,7 @@ SELECT AVG(limite) AS media_limite_cartao
 FROM pagamento
 WHERE tipo_pagamento = 'Cartão';
 ```
-## Query 8 :mag_right:
+## Query 8 :bangbang:
 
 **Exibindo Total de Pedidos efetuados e Valor Total do Frete com Status confirmados.**
 
@@ -198,7 +198,7 @@ FROM pedido
 WHERE status_pedido = 'Confirmado'
 GROUP BY status_pedido;
 ```
-## Query 9 :mag_right:
+## Query 9 :heavy_exclamation_mark:
 
 **Exibindo Razão Social, e-mail e endereço dos fornecedores do Estado de SP.**
 
@@ -209,7 +209,7 @@ SELECT razao_social, email, endereco
 FROM fornecedor
 WHERE endereco LIKE '%SP%';
 ```
-## Query 10 :mag_right:
+## Query 10 :flags:
 
 **Exibindo Média da avaliação dos produtos com duas casas decimais e cabeçalho renomeado.**
 
@@ -219,7 +219,7 @@ WHERE endereco LIKE '%SP%';
 SELECT ROUND(AVG(avaliacao), 2) AS Médida_Avaliação
 FROM produto;
 ```
-## Query 11 :mag_right:
+## Query 11 :cyclone:
 
 **Exibindo na ordem descendente Nota e Nome dos produtos das categorias filtradas.**
 
@@ -232,7 +232,7 @@ FROM produto
 WHERE categoria IN ('Eletrônico', 'Informatica')
 ORDER BY nome DESC;
 ```
-## Query 12 :mag_right:
+## Query 12 :sparkles:
 
 **Exibindo número de pedidos por cliente pf e pj.**
 
@@ -244,7 +244,7 @@ FROM cliente
 LEFT JOIN pedido ON id_cliente = pedido.id_pedido
 GROUP BY id_cliente;
 ```
-## Query 13 :mag_right:
+## Query 13 :star2:
 
 **Exibindo pedidos entre 01/11/2023 à 31/12/2023.**
 
@@ -255,7 +255,7 @@ SELECT data_pedido AS Data, descricao_pedido AS Descrição, quantidade AS Quant
 FROM pedido
 WHERE data_pedido BETWEEN '2023-11-01' AND '2023-12-31';
 ```
-## Query 14 :mag_right:
+## Query 14 :flashlight:
 
 **Exibindo os três primeiros caracteres do RG dos clientes PF.**
 
@@ -265,7 +265,7 @@ WHERE data_pedido BETWEEN '2023-11-01' AND '2023-12-31';
 SELECT nome, SUBSTRING(RG, 1, 3) AS RG_3_Digitos
 FROM cliente_pf;
 ```
-## Query 15 :mag_right:
+## Query 15 :pushpin:
 
 **Exibindo a quantidade de produtos por Categoria, usando a cláusula Having.**
 

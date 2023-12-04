@@ -100,7 +100,7 @@ O banco de dados abrange as seguintes entidades principais:
 
 O script também inclui tabelas de junção e associações, proporcionando flexibilidade para consultas complexas e análises de dados.
 
-## Tabelas de Cliente :client:
+## Tabelas de Cliente :zap:
     
 1. **Cliente_PF:** Tabela de clientes pessoa física.
 ```sql
@@ -186,7 +186,7 @@ CREATE TABLE pedido (
     CONSTRAINT fk_pedido_cliente FOREIGN KEY (id_pedido_cliente) REFERENCES cliente(id_cliente) ON UPDATE CASCADE
 );
 ```
-## Tabela de Estoque :package_with_arrow:
+## Tabela de Estoque :centralized:
 
 ```sql
 CREATE TABLE estoque (
@@ -236,7 +236,7 @@ CREATE TABLE transportadora (
     CONSTRAINT uk_transportadora_cnpj UNIQUE (CNPJ)
 );
 ```
-## Tabela de Entrega :package_delivery:
+## Tabela de Entrega :bricks:
 
 ```sql
 CREATE TABLE entrega (
@@ -252,7 +252,7 @@ CREATE TABLE entrega (
     CONSTRAINT fk_entrega_transportadora FOREIGN KEY (id_transportadora) REFERENCES transportadora(id_transportadora)
 );
 ```
-## Tabela de Produto_Vendedor :seller_package:
+## Tabela de Produto_Vendedor :key:
 
 ```sql
 CREATE TABLE produto_vendedor (
@@ -264,7 +264,7 @@ CREATE TABLE produto_vendedor (
     CONSTRAINT fk_produto_vendedor_produto FOREIGN KEY (id_produto) REFERENCES produto(id_produto)
 );
 ```
-## Tabela de Pedido_Produto
+## Tabela de Pedido_Produto :label:
 
 ```sql
 CREATE TABLE pedido_produto(
@@ -277,7 +277,7 @@ CREATE TABLE pedido_produto(
     CONSTRAINT fk_produto_pedido FOREIGN KEY (id_pedido) REFERENCES Pedido(id_pedido)
 );
 ```
-## Tabela de Estoque_Local
+## Tabela de Estoque_Local :gear:
 
 ```sql
 CREATE TABLE estoque_local(
@@ -289,7 +289,7 @@ CREATE TABLE estoque_local(
     CONSTRAINT fk_estoque_local_estoque FOREIGN KEY (id_estoque) REFERENCES estoque(id_estoque)
 );
 ```
-## Tabela de Produto_Fornecedor
+## Tabela de Produto_Fornecedor :fuelpump:
 
 ```sql
 CREATE TABLE produto_fornecedor(
