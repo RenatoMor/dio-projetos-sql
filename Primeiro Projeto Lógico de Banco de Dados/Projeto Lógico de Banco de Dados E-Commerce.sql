@@ -214,28 +214,6 @@ CREATE TABLE produto_fornecedor(
 );
 -- ---------------------------------------------------------------------------
 
-SHOW TABLE STATUS;
-
-select * from cliente_pf;
-select * from cliente_pf;
-select * from cliente;
-select * from produto;
-select * from pagamento;
-select * from pedido;
-select * from estoque;
-select * from fornecedor;
-select * from vendedor_terceiro;
-select * from transportadora;
-select * from entrega;
-select * from produto_vendedor;
-select * from pedido_produto;
-select * from estoque_local;
-select * from produto_fornecedor;
-
-    
-
-
-
 
 	
 
